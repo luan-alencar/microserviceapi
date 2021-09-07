@@ -1,16 +1,19 @@
 package david.augusto.luan.sgeservice.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
-public interface ServiceGenericEntity<E, D> {
+@Service
+public interface ServiceGenericEntity<E> {
 
-    List<D> findAll();
+    List<E> findAll();
 
-    D save(E entity);
+    E save(E entity);
 
-    D update(D dto);
+    E update(E dto);
 
-    D getByID(Long id);
+    E getByIE(Long id);
 
     void delete(Long id);
 }

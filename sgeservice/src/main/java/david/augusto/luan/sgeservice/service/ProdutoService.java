@@ -1,23 +1,24 @@
 package david.augusto.luan.sgeservice.service;
 
 import david.augusto.luan.sgeservice.domain.Produto;
-import david.augusto.luan.sgeservice.service.dto.ProdutoDTO;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface ProdutoService extends ServiceGenericEntity<Produto, ProdutoDTO> {
+@Service
+public interface ProdutoService extends ServiceGenericEntity<Produto> {
 
     @Override
-    List<ProdutoDTO> findAll();
+    List<Produto> findAll();
 
     @Override
-    ProdutoDTO save(Produto entity);
+    Produto save(Produto entity);
 
     @Override
-    ProdutoDTO update(ProdutoDTO dto);
+    Produto update(Produto dto);
 
     @Override
-    ProdutoDTO getByID(Long id);
+    Produto getByIE(Long id);
 
     @Override
     void delete(Long id);

@@ -9,13 +9,12 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Entity
-@Table(name = "TB_PRODUTO")
 public class Produto implements Serializable {
 
     private static final long serialVersionUID = 8323641732296152291L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "DESCRICAO")
